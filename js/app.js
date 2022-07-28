@@ -1,31 +1,40 @@
 'use strict';
+// 21/24 TODOs left
 
-// Cart constructor.
-const Cart = function(items) {
+// Cart letructor.
+let Cart = function(items) {
   // this.items is an array of CartItem instances.
   this.items = items;
 };
 
 Cart.prototype.addItem = function(product, quantity) {
-  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  // DONE: Fill in this instance method to create a new CartItem and add it to this.items
+  let newCartItem = new CartItem(product, quantity);
+  this.items.push(newCartItem);
 };
+
 
 Cart.prototype.saveToLocalStorage = function() {
-  // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  // DONE: Fill in this instance method to save the contents of the cart to localStorage
+  // convert items into string
+  let cartStorage = JSON.stringify(this.items);
+  localStorage.setItem('cartKey', cartStorage);
+  // set to local storage
 };
 
-Cart.prototype.removeItem = function(item) {
-  // TODO: Fill in this instance method to remove one item from the cart.
+Cart.prototype.removeItem = function(itemIndex) {
+  // DONE: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  this.items.splice(itemIndex, 1);
 };
 
-const CartItem = function(product, quantity) {
+let CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
 };
 
-// Product contructor.
-const Product = function(filePath, name) {
+// Product constructor.
+let Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
   Product.allProducts.push(this);

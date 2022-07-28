@@ -1,1 +1,71 @@
 /* TODO: Make it awesome */
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body header h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+main header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-left: .5rem;
+  padding-left: .5rem;
+  margin: 0;
+  display: block;
+}
+
+ol li {
+  text-align: center;
+}
+
+legend {
+  padding-top: 1rem;
+  margin: 1.5rem 1.5rem;
+}
+
+#cartContents {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem;
+}
+footer {
+    width: 960px;
+  display: block;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+/* cart.html */
+
+#cart {
+  margin-top: 1rem;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#cart thead {
+  margin-top: 1rem;
+  display: inline-block;
+  margin: 0 auto;
+}
